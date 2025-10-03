@@ -11,7 +11,7 @@ const bookingRoutes = require("./routes/bookingRoutes");
 const app = express();
 
 // 3) Define port number
-const PORT = 3000;
+const port = process.env.PORT || 5800;
 
 // 4) Middleware to parse JSON data
 app.use(express.json());
@@ -30,6 +30,6 @@ app.use("/api/bookings", bookingRoutes);
 
 
 // 6) Start the server
-app.listen(PORT, () => {
-  console.log('Server running on http://localhost:${PORT}');
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
