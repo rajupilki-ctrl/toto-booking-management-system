@@ -3,22 +3,15 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav class="navbar">
-  <a href="/" class="navbar-brand">Toto Booking</a>
-
-  {/* Mobile Menu Button */}
-  <span class="menu-toggle" onclick="document.querySelector('.navbar-nav').classList.toggle('active')">
-    ☰
-  </span>
-
-  <ul class="navbar-nav">
-    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-    <li class="nav-item"><a class="nav-link" href="/booking">Booking</a></li>
-    <li class="nav-item"><a class="nav-link" href="/users">Users</a></li>
-    <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
-  </ul>
-</nav>
-
+    <nav className="navbar">
+      <Link to="/" className="navbar-brand">Toto Booking</Link>
+      <ul className="navbar-nav">
+        <li><Link to="/register" className="nav-link">Register</Link></li>
+        <li><Link to="/booking" className="nav-link">Booking</Link></li>
+        <li><Link to="/users" className="nav-link">Users</Link></li>
+        <li><Link to="/admin" className="nav-link">Admin</Link></li>
+      </ul>
+    </nav>
   );
 }
 

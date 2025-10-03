@@ -1,5 +1,6 @@
 // 1) Import express library
 const express = require("express");
+const cors = require("cors");
 
 const connectDB = require("./config/db.js");
 //import routes
@@ -9,6 +10,7 @@ const bookingRoutes = require("./routes/bookingRoutes");
 
 // 2) Create express app
 const app = express();
+app.use(cors());
 
 // 3) Define port number
 const port = process.env.PORT || 5800;
