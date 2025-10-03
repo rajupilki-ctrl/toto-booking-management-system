@@ -21,24 +21,40 @@ function BookingPage() {
   return (
     <div className="container mt-4">
       <h2>Book Toto</h2>
-      <form onSubmit={handleBooking} className="col-md-6 mx-auto">
-        <input 
-          type="text" className="form-control mb-3"
+
+      <form onSubmit={handleBooking}>
+        <input
+          type="text"
+          className="form-control"
           placeholder="Enter User ID"
-          value={userId} onChange={(e) => setUserId(e.target.value)} required
+          value={userId}
+          onChange={(e) => setUserId(e.target.value)}
+          required
         />
-        <input 
-          type="date" className="form-control mb-3"
-          value={date} onChange={(e) => setDate(e.target.value)} required
+
+        <input
+          type="date"
+          className="form-control"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
         />
-        <input 
-          type="number" className="form-control mb-3"
+
+        <input
+          type="number"
+          className="form-control"
           placeholder="Enter Amount"
-          value={amount} onChange={(e) => setAmount(e.target.value)} required
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          required
         />
-        <button className="btn btn-success w-100" type="submit">Book Now</button>
+
+        <button className="btn-success w-100" type="submit">
+          Book Now
+        </button>
       </form>
     </div>
+
   );
 }
 

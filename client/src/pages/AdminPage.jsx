@@ -19,9 +19,16 @@ function AdminPage() {
   return (
     <div className="container mt-4">
       <h2>Admin Panel - Manage Bookings</h2>
-      <table className="table table-bordered table-striped">
-        <thead className="table-dark">
-          <tr><th>ID</th><th>User</th><th>Date</th><th>Amount</th><th>Action</th></tr>
+
+      <table className="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
         </thead>
         <tbody>
           {bookings.map(b => (
@@ -31,13 +38,19 @@ function AdminPage() {
               <td>{b.date}</td>
               <td>{b.amount}</td>
               <td>
-                <button className="btn btn-danger btn-sm" onClick={() => deleteBooking(b._id)}>Delete</button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => deleteBooking(b._id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+
   );
 }
 

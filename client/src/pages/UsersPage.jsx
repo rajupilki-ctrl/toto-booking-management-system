@@ -10,7 +10,7 @@ function UsersPage() {
   };
 
   const deleteUser = async (id) => {
-    await fetch('http://localhost:3000/api/users/${id}', { method: "DELETE" });
+    await fetch(`http://localhost:3000/api/users/${id}`, { method: "DELETE" });
     fetchUsers();
   };
 

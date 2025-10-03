@@ -21,20 +21,32 @@ function RegisterPage() {
   return (
     <div className="container mt-4">
       <h2>Register User</h2>
-      <form onSubmit={handleSubmit} className="col-md-6 mx-auto">
-        <input 
-          type="text" className="form-control mb-3"
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="form-control"
           placeholder="Enter Name"
-          value={name} onChange={(e) => setName(e.target.value)} required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
         />
-        <input 
-          type="email" className="form-control mb-3"
+
+        <input
+          type="email"
+          className="form-control"
           placeholder="Enter Email"
-          value={email} onChange={(e) => setEmail(e.target.value)} required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
-        <button className="btn btn-primary w-100" type="submit">Register</button>
+
+        <button className="btn-primary w-100" type="submit">
+          Register
+        </button>
       </form>
     </div>
+
   );
 }
 

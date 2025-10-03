@@ -1,22 +1,17 @@
 import React from "react";
 
-
+const totoImage = 'https://cdn.motorfloor.com/vehicles/three-wheeler/sathi-toto-passenger-battery-rickshaw.jpg'
 function HomePage() {
   return (
-    <div className="container text-center mt-4">
-      <h1 className="mb-4">Welcome to Online Toto Booking System</h1>
-      
-      {/* Toto Image */}
-      <img 
-        src={totoImage} 
-        alt="Toto" 
-        className="img-fluid rounded shadow mb-4"
-        style={{ maxWidth: "500px" }}
-      />
+    <div class="container">
+      <h1>Welcome to Online Toto Booking System</h1>
 
-      {/* Flow */}
+      {/* Toto Image */}
+      <img src="https://cdn.motorfloor.com/vehicles/three-wheeler/sathi-toto-passenger-battery-rickshaw.jpg" alt="Toto" class="hero-image" />
+
+      {/* Flow Section */}
       <h3>How It Works:</h3>
-      <ol className="text-start mx-auto" style={{ maxWidth: "400px" }}>
+      <ol class="steps">
         <li>User goes to <b>Register Page</b> → creates an account.</li>
         <li>User goes to <b>Booking Page</b> → books Toto (with date, amount).</li>
         <li><b>Admin Page</b> → manage bookings and users (CRUD).</li>

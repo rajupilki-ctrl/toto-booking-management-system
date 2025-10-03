@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
@@ -6,6 +5,8 @@ import RegisterPage from "./pages/RegisterPage";
 import BookingPage from "./pages/BookingPage";
 import UsersPage from "./pages/UsersPage";
 import AdminPage from "./pages/AdminPage";
+import './index.css'
+
 
 function App() {
   return (
