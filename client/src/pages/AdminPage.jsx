@@ -4,13 +4,13 @@ function AdminPage() {
   const [bookings, setBookings] = useState([]);
 
   const fetchBookings = async () => {
-    const res = await fetch("http://localhost:5800/api/bookings");
+    const res = await fetch("https://toto-booking-management-system.onrender.com/api/bookings");
     const data = await res.json();
     setBookings(data);
   };
 
   const deleteBooking = async (id) => {
-    await fetch(`http://localhost:5800/api/bookings/${id}`, { method: "DELETE" });
+    await fetch(`https://toto-booking-management-system.onrender.com/api/bookings/${id}`, { method: "DELETE" });
     fetchBookings();
   };
 

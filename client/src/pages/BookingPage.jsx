@@ -9,7 +9,7 @@ function BookingPage() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await fetch("http://localhost:5800/api/users");
+      const res = await fetch("https://toto-booking-management-system.onrender.com/api/users");
       const data = await res.json();
       setUsers(data);
     };
@@ -18,7 +18,7 @@ function BookingPage() {
 
   const handleBooking = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5800/api/bookings", {
+    const res = await fetch("https://toto-booking-management-system.onrender.com/api/bookings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user, bookingDate, amount, totoNumber })

@@ -4,13 +4,13 @@ function UsersPage() {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
-    const res = await fetch("http://localhost:5800/api/users");
+    const res = await fetch("https://toto-booking-management-system.onrender.com/api/users");
     const data = await res.json();
     setUsers(data);
   };
 
   const deleteUser = async (id) => {
-    await fetch(`http://localhost:5800/api/users/${id}`, { method: "DELETE" });
+    await fetch(`https://toto-booking-management-system.onrender.com/api/users/${id}`, { method: "DELETE" });
     fetchUsers();
   };
 
